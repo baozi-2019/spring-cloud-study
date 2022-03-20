@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.21.0.15:3306/spring_cloud_study?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&logger=Slf4JLogger&profileSQL=true&maxQuerySizeToLog=65535
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  mapper-locations: classpath*:/mybatis/*.xml

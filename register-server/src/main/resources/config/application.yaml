@@ -1,0 +1,21 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: register-server
+  security:
+    user:
+      name: baozi
+      password: 123456
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    renewal-percent-threshold: 0.85

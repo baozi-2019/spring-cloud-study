@@ -1,0 +1,13 @@
+server:
+  port: 8001
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER  # swagger在2.6.x版本集成启动错误，加入该参数可以解决
+  application:
+    name: payment-service
+  profiles:
+    include:
+      - datasource
+      - eureka
