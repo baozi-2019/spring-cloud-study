@@ -4,12 +4,18 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.baozi.common.enums.ResponseCodeEnum;
+
+import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @ApiModel(description = "公共相应体")
-public class Response<T> {
+public class Response<T> implements Serializable {
+    private static final long serialVersionUID = 8347469064404111488L;
+
     @ApiModelProperty(name = "响应数据")
     private T responseData;
 
@@ -43,4 +49,27 @@ public class Response<T> {
         return new Response<>(null, responseCodeEnum.getCode(), errorMessage);
     }
 
+    public T getResponseData() {
+        return responseData;
+    }
+
+    public void setResponseData(T responseData) {
+        this.responseData = responseData;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
 }

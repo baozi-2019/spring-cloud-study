@@ -1,0 +1,17 @@
+server:
+  port: 8002
+
+eureka:
+  client:
+    enabled: true
+    fetch-registry: true
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://baozi:123456@localhost:7001/eureka
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER  # swagger在2.6.x版本集成启动错误，加入该参数可以解决
+  jackson:
+    locale: zh
+    time-zone: Asia/Shanghai

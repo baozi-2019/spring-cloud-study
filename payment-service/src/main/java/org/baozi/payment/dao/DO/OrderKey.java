@@ -1,11 +1,11 @@
 package org.baozi.payment.dao.DO;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class OrderKey {
     private Long orderId;
 
-    private Date createTime;
+    private LocalDateTime createTime;
 
     public Long getOrderId() {
         return orderId;
@@ -15,11 +15,11 @@ public class OrderKey {
         this.orderId = orderId;
     }
 
-    public Date getCreateTime() {
+    public LocalDateTime getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(LocalDateTime createTime) {
         this.createTime = createTime;
     }
 }

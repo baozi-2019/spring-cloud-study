@@ -1,6 +1,7 @@
 package org.baozi.payment.dao.DO;
 
-import java.util.Date;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 public class Order extends OrderKey {
     private String outTradeNo;
@@ -11,17 +12,17 @@ public class Order extends OrderKey {
 
     private Long payInfoId;
 
-    private Short totalAmount;
+    private BigDecimal totalAmount;
 
-    private Short discountAmount;
+    private BigDecimal discountAmount;
 
-    private Short payAmount;
+    private BigDecimal payAmount;
 
-    private Short refundAmount;
+    private BigDecimal refundAmount;
 
     private String orderRemark;
 
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     public String getOutTradeNo() {
         return outTradeNo;
@@ -55,35 +56,35 @@ public class Order extends OrderKey {
         this.payInfoId = payInfoId;
     }
 
-    public Short getTotalAmount() {
+    public BigDecimal getTotalAmount() {
         return totalAmount;
     }
 
-    public void setTotalAmount(Short totalAmount) {
+    public void setTotalAmount(BigDecimal totalAmount) {
         this.totalAmount = totalAmount;
     }
 
-    public Short getDiscountAmount() {
+    public BigDecimal getDiscountAmount() {
         return discountAmount;
     }
 
-    public void setDiscountAmount(Short discountAmount) {
+    public void setDiscountAmount(BigDecimal discountAmount) {
         this.discountAmount = discountAmount;
     }
 
-    public Short getPayAmount() {
+    public BigDecimal getPayAmount() {
         return payAmount;
     }
 
-    public void setPayAmount(Short payAmount) {
+    public void setPayAmount(BigDecimal payAmount) {
         this.payAmount = payAmount;
     }
 
-    public Short getRefundAmount() {
+    public BigDecimal getRefundAmount() {
         return refundAmount;
     }
 
-    public void setRefundAmount(Short refundAmount) {
+    public void setRefundAmount(BigDecimal refundAmount) {
         this.refundAmount = refundAmount;
     }
 
@@ -95,11 +96,11 @@ public class Order extends OrderKey {
         this.orderRemark = orderRemark == null ? null : orderRemark.trim();
     }
 
-    public Date getUpdateTime() {
+    public LocalDateTime getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
     }
 }

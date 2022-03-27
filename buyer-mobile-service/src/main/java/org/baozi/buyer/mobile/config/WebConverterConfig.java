@@ -1,4 +1,4 @@
-package org.baozi.payment.config;
+package org.baozi.buyer.mobile.config;
 
 import org.baozi.common.util.JacksonConverterUtil;
 import org.springframework.context.annotation.Configuration;

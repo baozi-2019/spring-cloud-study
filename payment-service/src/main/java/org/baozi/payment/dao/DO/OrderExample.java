@@ -1,7 +1,8 @@
 package org.baozi.payment.dao.DO;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class OrderExample {
@@ -214,52 +215,52 @@ public class OrderExample {
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeEqualTo(Date value) {
+        public Criteria andCreateTimeEqualTo(LocalDateTime value) {
             addCriterion("create_time =", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeNotEqualTo(Date value) {
+        public Criteria andCreateTimeNotEqualTo(LocalDateTime value) {
             addCriterion("create_time <>", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeGreaterThan(Date value) {
+        public Criteria andCreateTimeGreaterThan(LocalDateTime value) {
             addCriterion("create_time >", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andCreateTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("create_time >=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeLessThan(Date value) {
+        public Criteria andCreateTimeLessThan(LocalDateTime value) {
             addCriterion("create_time <", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
+        public Criteria andCreateTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("create_time <=", value, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeIn(List<Date> values) {
+        public Criteria andCreateTimeIn(List<LocalDateTime> values) {
             addCriterion("create_time in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeNotIn(List<Date> values) {
+        public Criteria andCreateTimeNotIn(List<LocalDateTime> values) {
             addCriterion("create_time not in", values, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeBetween(Date value1, Date value2) {
+        public Criteria andCreateTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("create_time between", value1, value2, "createTime");
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
+        public Criteria andCreateTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("create_time not between", value1, value2, "createTime");
             return (Criteria) this;
         }
@@ -534,52 +535,52 @@ public class OrderExample {
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountEqualTo(Short value) {
+        public Criteria andTotalAmountEqualTo(BigDecimal value) {
             addCriterion("total_amount =", value, "totalAmount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountNotEqualTo(Short value) {
+        public Criteria andTotalAmountNotEqualTo(BigDecimal value) {
             addCriterion("total_amount <>", value, "totalAmount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountGreaterThan(Short value) {
+        public Criteria andTotalAmountGreaterThan(BigDecimal value) {
             addCriterion("total_amount >", value, "totalAmount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountGreaterThanOrEqualTo(Short value) {
+        public Criteria andTotalAmountGreaterThanOrEqualTo(BigDecimal value) {
             addCriterion("total_amount >=", value, "totalAmount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountLessThan(Short value) {
+        public Criteria andTotalAmountLessThan(BigDecimal value) {
             addCriterion("total_amount <", value, "totalAmount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountLessThanOrEqualTo(Short value) {
+        public Criteria andTotalAmountLessThanOrEqualTo(BigDecimal value) {
             addCriterion("total_amount <=", value, "totalAmount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountIn(List<Short> values) {
+        public Criteria andTotalAmountIn(List<BigDecimal> values) {
             addCriterion("total_amount in", values, "totalAmount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountNotIn(List<Short> values) {
+        public Criteria andTotalAmountNotIn(List<BigDecimal> values) {
             addCriterion("total_amount not in", values, "totalAmount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountBetween(Short value1, Short value2) {
+        public Criteria andTotalAmountBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("total_amount between", value1, value2, "totalAmount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountNotBetween(Short value1, Short value2) {
+        public Criteria andTotalAmountNotBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("total_amount not between", value1, value2, "totalAmount");
             return (Criteria) this;
         }
@@ -594,52 +595,52 @@ public class OrderExample {
             return (Criteria) this;
         }
 
-        public Criteria andDiscountAmountEqualTo(Short value) {
+        public Criteria andDiscountAmountEqualTo(BigDecimal value) {
             addCriterion("discount_amount =", value, "discountAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountAmountNotEqualTo(Short value) {
+        public Criteria andDiscountAmountNotEqualTo(BigDecimal value) {
             addCriterion("discount_amount <>", value, "discountAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountAmountGreaterThan(Short value) {
+        public Criteria andDiscountAmountGreaterThan(BigDecimal value) {
             addCriterion("discount_amount >", value, "discountAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountAmountGreaterThanOrEqualTo(Short value) {
+        public Criteria andDiscountAmountGreaterThanOrEqualTo(BigDecimal value) {
             addCriterion("discount_amount >=", value, "discountAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountAmountLessThan(Short value) {
+        public Criteria andDiscountAmountLessThan(BigDecimal value) {
             addCriterion("discount_amount <", value, "discountAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountAmountLessThanOrEqualTo(Short value) {
+        public Criteria andDiscountAmountLessThanOrEqualTo(BigDecimal value) {
             addCriterion("discount_amount <=", value, "discountAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountAmountIn(List<Short> values) {
+        public Criteria andDiscountAmountIn(List<BigDecimal> values) {
             addCriterion("discount_amount in", values, "discountAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountAmountNotIn(List<Short> values) {
+        public Criteria andDiscountAmountNotIn(List<BigDecimal> values) {
             addCriterion("discount_amount not in", values, "discountAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountAmountBetween(Short value1, Short value2) {
+        public Criteria andDiscountAmountBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("discount_amount between", value1, value2, "discountAmount");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountAmountNotBetween(Short value1, Short value2) {
+        public Criteria andDiscountAmountNotBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("discount_amount not between", value1, value2, "discountAmount");
             return (Criteria) this;
         }
@@ -654,52 +655,52 @@ public class OrderExample {
             return (Criteria) this;
         }
 
-        public Criteria andPayAmountEqualTo(Short value) {
+        public Criteria andPayAmountEqualTo(BigDecimal value) {
             addCriterion("pay_amount =", value, "payAmount");
             return (Criteria) this;
         }
 
-        public Criteria andPayAmountNotEqualTo(Short value) {
+        public Criteria andPayAmountNotEqualTo(BigDecimal value) {
             addCriterion("pay_amount <>", value, "payAmount");
             return (Criteria) this;
         }
 
-        public Criteria andPayAmountGreaterThan(Short value) {
+        public Criteria andPayAmountGreaterThan(BigDecimal value) {
             addCriterion("pay_amount >", value, "payAmount");
             return (Criteria) this;
         }
 
-        public Criteria andPayAmountGreaterThanOrEqualTo(Short value) {
+        public Criteria andPayAmountGreaterThanOrEqualTo(BigDecimal value) {
             addCriterion("pay_amount >=", value, "payAmount");
             return (Criteria) this;
         }
 
-        public Criteria andPayAmountLessThan(Short value) {
+        public Criteria andPayAmountLessThan(BigDecimal value) {
             addCriterion("pay_amount <", value, "payAmount");
             return (Criteria) this;
         }
 
-        public Criteria andPayAmountLessThanOrEqualTo(Short value) {
+        public Criteria andPayAmountLessThanOrEqualTo(BigDecimal value) {
             addCriterion("pay_amount <=", value, "payAmount");
             return (Criteria) this;
         }
 
-        public Criteria andPayAmountIn(List<Short> values) {
+        public Criteria andPayAmountIn(List<BigDecimal> values) {
             addCriterion("pay_amount in", values, "payAmount");
             return (Criteria) this;
         }
 
-        public Criteria andPayAmountNotIn(List<Short> values) {
+        public Criteria andPayAmountNotIn(List<BigDecimal> values) {
             addCriterion("pay_amount not in", values, "payAmount");
             return (Criteria) this;
         }
 
-        public Criteria andPayAmountBetween(Short value1, Short value2) {
+        public Criteria andPayAmountBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("pay_amount between", value1, value2, "payAmount");
             return (Criteria) this;
         }
 
-        public Criteria andPayAmountNotBetween(Short value1, Short value2) {
+        public Criteria andPayAmountNotBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("pay_amount not between", value1, value2, "payAmount");
             return (Criteria) this;
         }
@@ -714,52 +715,52 @@ public class OrderExample {
             return (Criteria) this;
         }
 
-        public Criteria andRefundAmountEqualTo(Short value) {
+        public Criteria andRefundAmountEqualTo(BigDecimal value) {
             addCriterion("refund_amount =", value, "refundAmount");
             return (Criteria) this;
         }
 
-        public Criteria andRefundAmountNotEqualTo(Short value) {
+        public Criteria andRefundAmountNotEqualTo(BigDecimal value) {
             addCriterion("refund_amount <>", value, "refundAmount");
             return (Criteria) this;
         }
 
-        public Criteria andRefundAmountGreaterThan(Short value) {
+        public Criteria andRefundAmountGreaterThan(BigDecimal value) {
             addCriterion("refund_amount >", value, "refundAmount");
             return (Criteria) this;
         }
 
-        public Criteria andRefundAmountGreaterThanOrEqualTo(Short value) {
+        public Criteria andRefundAmountGreaterThanOrEqualTo(BigDecimal value) {
             addCriterion("refund_amount >=", value, "refundAmount");
             return (Criteria) this;
         }
 
-        public Criteria andRefundAmountLessThan(Short value) {
+        public Criteria andRefundAmountLessThan(BigDecimal value) {
             addCriterion("refund_amount <", value, "refundAmount");
             return (Criteria) this;
         }
 
-        public Criteria andRefundAmountLessThanOrEqualTo(Short value) {
+        public Criteria andRefundAmountLessThanOrEqualTo(BigDecimal value) {
             addCriterion("refund_amount <=", value, "refundAmount");
             return (Criteria) this;
         }
 
-        public Criteria andRefundAmountIn(List<Short> values) {
+        public Criteria andRefundAmountIn(List<BigDecimal> values) {
             addCriterion("refund_amount in", values, "refundAmount");
             return (Criteria) this;
         }
 
-        public Criteria andRefundAmountNotIn(List<Short> values) {
+        public Criteria andRefundAmountNotIn(List<BigDecimal> values) {
             addCriterion("refund_amount not in", values, "refundAmount");
             return (Criteria) this;
         }
 
-        public Criteria andRefundAmountBetween(Short value1, Short value2) {
+        public Criteria andRefundAmountBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("refund_amount between", value1, value2, "refundAmount");
             return (Criteria) this;
         }
 
-        public Criteria andRefundAmountNotBetween(Short value1, Short value2) {
+        public Criteria andRefundAmountNotBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("refund_amount not between", value1, value2, "refundAmount");
             return (Criteria) this;
         }
@@ -844,52 +845,52 @@ public class OrderExample {
             return (Criteria) this;
         }
 
-        public Criteria andUpdateTimeEqualTo(Date value) {
+        public Criteria andUpdateTimeEqualTo(LocalDateTime value) {
             addCriterion("update_time =", value, "updateTime");
             return (Criteria) this;
         }
 
-        public Criteria andUpdateTimeNotEqualTo(Date value) {
+        public Criteria andUpdateTimeNotEqualTo(LocalDateTime value) {
             addCriterion("update_time <>", value, "updateTime");
             return (Criteria) this;
         }
 
-        public Criteria andUpdateTimeGreaterThan(Date value) {
+        public Criteria andUpdateTimeGreaterThan(LocalDateTime value) {
             addCriterion("update_time >", value, "updateTime");
             return (Criteria) this;
         }
 
-        public Criteria andUpdateTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andUpdateTimeGreaterThanOrEqualTo(LocalDateTime value) {
             addCriterion("update_time >=", value, "updateTime");
             return (Criteria) this;
         }
 
-        public Criteria andUpdateTimeLessThan(Date value) {
+        public Criteria andUpdateTimeLessThan(LocalDateTime value) {
             addCriterion("update_time <", value, "updateTime");
             return (Criteria) this;
         }
 
-        public Criteria andUpdateTimeLessThanOrEqualTo(Date value) {
+        public Criteria andUpdateTimeLessThanOrEqualTo(LocalDateTime value) {
             addCriterion("update_time <=", value, "updateTime");
             return (Criteria) this;
         }
 
-        public Criteria andUpdateTimeIn(List<Date> values) {
+        public Criteria andUpdateTimeIn(List<LocalDateTime> values) {
             addCriterion("update_time in", values, "updateTime");
             return (Criteria) this;
         }
 
-        public Criteria andUpdateTimeNotIn(List<Date> values) {
+        public Criteria andUpdateTimeNotIn(List<LocalDateTime> values) {
             addCriterion("update_time not in", values, "updateTime");
             return (Criteria) this;
         }
 
-        public Criteria andUpdateTimeBetween(Date value1, Date value2) {
+        public Criteria andUpdateTimeBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("update_time between", value1, value2, "updateTime");
             return (Criteria) this;
         }
 
-        public Criteria andUpdateTimeNotBetween(Date value1, Date value2) {
+        public Criteria andUpdateTimeNotBetween(LocalDateTime value1, LocalDateTime value2) {
             addCriterion("update_time not between", value1, value2, "updateTime");
             return (Criteria) this;
         }

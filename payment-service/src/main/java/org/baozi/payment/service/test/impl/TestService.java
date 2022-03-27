@@ -1,12 +1,12 @@
 package org.baozi.payment.service.test.impl;
 
 import lombok.extern.slf4j.Slf4j;
+import org.baozi.payment.api.test.DTO.TestDTO;
+import org.baozi.payment.api.test.VO.TestVO;
 import org.baozi.payment.dao.DO.Order;
 import org.baozi.payment.dao.DO.OrderExample;
 import org.baozi.payment.dao.mapper.OrderMapper;
-import org.baozi.payment.service.test.DTO.TestDTO;
 import org.baozi.payment.service.test.ITestService;
-import org.baozi.payment.service.test.VO.TestVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 

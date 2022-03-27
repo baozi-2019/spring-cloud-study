@@ -1,6 +1,7 @@
 eureka:
   client:
     register-with-eureka: true
-    fetch-registry: true
+    fetch-registry: false
     service-url:
       defaultZone: http://baozi:123456@localhost:7001/eureka
+    enabled: true

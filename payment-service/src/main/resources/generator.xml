@@ -36,10 +36,12 @@
                         connectionURL="jdbc:mysql://172.21.0.15:3306/spring_cloud_study?useSSL=false&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true"
                         userId="root"
                         password="root"/>
-        <!--数据库BigDecimals字段在java中定义-->
-        <!--    <javaTypeResolver>-->
-        <!--      <property name="" value=""/>-->
-        <!--    </javaTypeResolver>-->
+        <!--数据库BigDecimals、LocalDate、LocalDateTime字段在java中定义-->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true" />
+            <!-- 增加下面这行，用于配置生成LocalDateTime对应数据库的DATETIME类型 -->
+            <property name="useJSR310Types" value="true" />
+        </javaTypeResolver>
         <!--实体类生成信息-->
         <javaModelGenerator targetPackage="org.baozi.payment.dao.DO" targetProject="src/main/java">
             <property name="enableSubPackages" value="false"/>
