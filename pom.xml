@@ -13,6 +13,7 @@
         <module>common</module>
         <module>register-server</module>
         <module>buyer-mobile-service</module>
+        <module>common-gateway</module>
     </modules>
 
     <properties>

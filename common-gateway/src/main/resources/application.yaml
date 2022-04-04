@@ -1,0 +1,27 @@
+server:
+  port: 9001
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: true
+    service-url:
+      defaultZone: http://baozi:123456@localhost:7001/eureka
+    enabled: true
+
+spring:
+  application:
+    name: common-gateway
+  cloud:
+    gateway:
+      enabled: true
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: buyer-mobile
+          uri: lb://buyer-mobile-service
+          predicates:
+            - Path=/**
+          filters:
+            - Test=X-AUTH, 444   # 具体规则 https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#writing-custom-gatewayfilter-factories
