@@ -15,3 +15,24 @@ spring:
   jackson:
     locale: zh
     time-zone: Asia/Shanghai
+  cloud:
+    circuitbreaker:
+      resilience4j:
+        enabled: false
+
+feign:
+  circuitbreaker:
+    enabled: true
+
+# https://resilience4j.readme.io/docs/circuitbreaker
+resilience4j:
+  circuitbreaker:
+    instances:
+      testA:
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5000
+        slidingWindowType: TIME_BASED
+        minimumNumberOfCalls: 10
+#        failureRateThreshold: 40
+        slowCallDurationThreshold: 500
+        slowCallRateThreshold: 30

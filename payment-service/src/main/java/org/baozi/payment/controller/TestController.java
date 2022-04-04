@@ -30,9 +30,10 @@ public class TestController {
 
     @ApiOperation(value = "测试接口")
     @PostMapping("/t1")
-    public TestVO test(@RequestBody LocalDateTime time) {
+    public TestVO test(@RequestBody LocalDateTime time, @RequestParam("p1") String p1) throws InterruptedException {
         System.out.println(time);
         TestVO test = testService.test();
+        Thread.sleep(600);
         return test;
     }
 

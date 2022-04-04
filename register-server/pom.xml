@@ -12,8 +12,8 @@
     <artifactId>register-server</artifactId>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <jaxb-runtime.version>3.0.2</jaxb-runtime.version>
     </properties>
 
@@ -27,11 +27,11 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <!-- JDK 11 支持 Eureka-->
-        <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-runtime</artifactId>
-            <version>${jaxb-runtime.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.glassfish.jaxb</groupId>-->
+<!--            <artifactId>jaxb-runtime</artifactId>-->
+<!--            <version>${jaxb-runtime.version}</version>-->
+<!--        </dependency>-->
     </dependencies>
 
 </project>
