@@ -1,0 +1,32 @@
+spring:
+  rabbitmq:
+    host: 172.21.0.15
+    port: 5672
+    username: admin
+    password: baozi199929
+    virtual-host: /spring-cloud
+  cloud:
+    stream:
+      rabbit:
+        bindings:
+          testOutput-out-0:
+            producer:
+              declareExchange: true
+              bindQueue: true
+              queueNameGroupOnly: true
+      bindings:
+        testOutput-out-0:
+          destination: test.output
+          group: test.output.queue
+          contentType: application/json
+          binder: rabbitmq
+          producer:
+            autoStartup: true
+            requiredGroups:
+              - test.output.queue
+      binders:
+        rabbitmq:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq: ${spring.rabbitmq}

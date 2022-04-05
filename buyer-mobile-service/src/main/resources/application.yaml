@@ -21,6 +21,36 @@ spring:
     circuitbreaker:
       resilience4j:
         enabled: false
+    stream:
+      function:
+        definition: testOutput
+      rabbit:
+        bindings:
+          testOutput-in-0:
+            consumer:
+              declareExchange: false
+              bindQueue: false
+              queueNameGroupOnly: true
+      bindings:
+        testOutput-in-0:
+          destination: test.output
+          group: test.output.queue
+          contentType: application/json
+          binder: rabbitmq
+          consumer:
+            autoStartup: true
+            concurrency: 5
+      binders:
+        rabbitmq:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 172.21.0.15
+                port: 5672
+                username: admin
+                password: baozi199929
+                virtual-host: /spring-cloud
 
 feign:
   circuitbreaker:

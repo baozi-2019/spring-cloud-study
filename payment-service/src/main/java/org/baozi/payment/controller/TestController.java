@@ -7,6 +7,7 @@ import org.baozi.payment.service.test.ITestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -18,14 +19,17 @@ import java.util.List;
 public class TestController {
     private final ITestService testService;
     private final DiscoveryClient discoveryClient;
+    private final StreamBridge streamBridge;
 
     @Autowired
     public TestController(
             ITestService testService,
-            DiscoveryClient discoveryClient
+            DiscoveryClient discoveryClient,
+            StreamBridge streamBridge
     ) {
         this.testService = testService;
         this.discoveryClient = discoveryClient;
+        this.streamBridge = streamBridge;
     }
 
     @ApiOperation(value = "测试接口")
@@ -35,6 +39,12 @@ public class TestController {
         TestVO test = testService.test();
         Thread.sleep(600);
         return test;
+    }
+
+    @GetMapping("/send/{message}")
+    public String send(@PathVariable("message") String message) {
+        streamBridge.send("testOutput-out-0", message);
+        return message;
     }
 
     @GetMapping("/t2")

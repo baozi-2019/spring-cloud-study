@@ -11,3 +11,4 @@ spring:
     include:
       - datasource
       - eureka
+      - mq
