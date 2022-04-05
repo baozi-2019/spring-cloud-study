@@ -31,6 +31,7 @@ spring:
               declareExchange: false
               bindQueue: false
               queueNameGroupOnly: true
+              acknowledgeMode: MANUAL
       bindings:
         testOutput-in-0:
           destination: test.output
